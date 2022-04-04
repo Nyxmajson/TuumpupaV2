@@ -19,6 +19,18 @@
   padding: 10px;
  }
 
+ .creation_characters{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   padding: 100px 0px 100px 0px;
+ }
+
+ .characters_content{
+   display: flex;
+   justify-content: center;
+ }
+
  .form_content{
   display: flex;
   flex-direction: row-reverse;
@@ -47,6 +59,12 @@ margin-bottom: 25px;
   display: flex;
   justify-content: space-evenly;
   background-color: #F29200;
+ }
+
+ .button-validation{
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content:space-between;
  }
 
  .target{
