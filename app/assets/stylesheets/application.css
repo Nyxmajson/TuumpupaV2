@@ -74,3 +74,34 @@ margin-bottom: 25px;
 .text-main-color{
   color: #F29200;
 }
+
+.characters{
+  position: relative;
+}
+
+.chr_mannequin,
+.chr_eyes{
+  position: absolute;
+}
+
+.hidden_item{
+  display: none;
+}
+
+.eyeshow1{
+  position: absolute;
+  top:65px;
+  left:50px;
+}
+
+.eyeshow2{
+  position: absolute;
+  top:75px;
+  left:50px;
+}
+
+.eyeshow3{
+  position: absolute;
+  top:70px;
+  left:50px;
+}
