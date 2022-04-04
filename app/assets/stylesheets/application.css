@@ -80,7 +80,8 @@ margin-bottom: 25px;
 }
 
 .chr_mannequin,
-.chr_eyes{
+.chr_eyes,
+.chr_hair{
   position: absolute;
 }
 
@@ -104,4 +105,25 @@ margin-bottom: 25px;
   position: absolute;
   top:70px;
   left:50px;
+}
+
+.hair1{
+  position: absolute;
+  width: 225px;
+  top:-50px;
+  left: 20px;
+
+}
+
+.hair2{
+  position: absolute;
+  width: 185px;
+  top:-25px;
+  left: 30px;
+}
+
+.hair3{
+  position: absolute;
+  top:-25px;
+  left: 30px;
 }
