@@ -248,6 +248,9 @@
             const bottom1 = document.querySelector(".section_bottom .item img[data-id='0']");
             const bottom2 = document.querySelector(".section_bottom .item img[data-id='1']");
             const bottom3 = document.querySelector(".section_bottom .item img[data-id='2']");
+            const chr_bottom1 = document.querySelector(".creation_characters .characters_content .characters .chr_bottom img[data-id='0']");
+            const chr_bottom2 = document.querySelector(".creation_characters .characters_content .characters .chr_bottom img[data-id='1']");
+            const chr_bottom3 = document.querySelector(".creation_characters .characters_content .characters .chr_bottom img[data-id='2']");
             bottom1.onclick = changeBottom;
             bottom2.onclick = changeBottom;
             bottom3.onclick = changeBottom;
@@ -262,18 +265,27 @@
                 bottom1.classList.add("target");
                 bottom2.classList.remove("target");
                 bottom3.classList.remove("target");
+                chr_bottom1.classList.remove("hidden_item");
+                chr_bottom2.classList.add("hidden_item");
+                chr_bottom3.classList.add("hidden_item");
               })
 
               bottom2.addEventListener('click', function () {
                 bottom2.classList.add("target");
                 bottom1.classList.remove("target");
                 bottom3.classList.remove("target");
+                chr_bottom1.classList.add("hidden_item");
+                chr_bottom2.classList.remove("hidden_item");
+                chr_bottom3.classList.add("hidden_item");
               })
 
               bottom3.addEventListener('click', function () {
                 bottom3.classList.add("target");
                 bottom2.classList.remove("target");
                 bottom1.classList.remove("target");
+                chr_bottom1.classList.add("hidden_item");
+                chr_bottom2.classList.add("hidden_item");
+                chr_bottom3.classList.remove("hidden_item");
               })
 
 
