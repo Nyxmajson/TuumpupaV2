@@ -18,24 +18,25 @@
             <%= image_tag 'Mannequin.svg','data-id':'0'  %>
           </div>
           <div class="chr_eyes">
-            <%= image_tag 'eye_1.svg','data-id':'1', class:"eyeshow eyeshow1 "  %>
-            <%= image_tag 'eye_2.svg','data-id':'2', class:"eyeshow eyeshow2 hidden_item"  %>
-            <%= image_tag 'eye_3.svg','data-id':'3', class:"eyeshow eyeshow3 hidden_item"  %>
+            <%= image_tag 'eye_1.svg','data-id':'0', class:"eyeshow eyeshow1 "  %>
+            <%= image_tag 'eye_2.svg','data-id':'1', class:"eyeshow eyeshow2 hidden_item"  %>
+            <%= image_tag 'eye_3.svg','data-id':'2', class:"eyeshow eyeshow3 hidden_item"  %>
+
           </div>
           <div class="chr_top">
-            <%= image_tag 'top_1.svg','data-id':'1', class:"top top1 hidden_item"  %>
-            <%= image_tag 'top_2.svg','data-id':'2', class:"top top2 hidden_item"  %>
-            <%= image_tag 'top_3.svg','data-id':'3', class:"top top3 "  %>
+            <%= image_tag 'top_1.svg','data-id':'0', class:"top top1 hidden_item"  %>
+            <%= image_tag 'top_2.svg','data-id':'1', class:"top top2 hidden_item"  %>
+            <%= image_tag 'top_3.svg','data-id':'2', class:"top top3 "  %>
           </div>
           <div class="chr_bottom">
-            <%= image_tag 'bottom_1.svg','data-id':'1', class:"bottom bottom1 "  %>
-            <%= image_tag 'bottom_2.svg','data-id':'2', class:"bottom bottom2 hidden_item"  %>
-            <%= image_tag 'bottom_3.svg','data-id':'3', class:"bottom bottom3 hidden_item"  %>
+            <%= image_tag 'bottom_1.svg','data-id':'0', class:"bottom bottom1 "  %>
+            <%= image_tag 'bottom_2.svg','data-id':'1', class:"bottom bottom2 hidden_item"  %>
+            <%= image_tag 'bottom_3.svg','data-id':'2', class:"bottom bottom3 hidden_item"  %>
           </div>
            <div class="chr_hair">
-            <%= image_tag 'hair_1.svg','data-id':'1', class:"hair hair1 hidden_item "  %>
-            <%= image_tag 'hair_2.svg','data-id':'2', class:"hair hair2 hidden_item "  %>
-            <%= image_tag 'hair_3.svg','data-id':'3', class:"hair hair3 "  %>
+            <%= image_tag 'hair_1.svg','data-id':'0', class:"hair hair1 hidden_item "  %>
+            <%= image_tag 'hair_2.svg','data-id':'1', class:"hair hair2 hidden_item "  %>
+            <%= image_tag 'hair_3.svg','data-id':'2', class:"hair hair3 "  %>
           </div>
         </div>
     </div>
@@ -77,6 +78,9 @@
             const eye1 = document.querySelector(".section_eye .item img[data-id='0']");
             const eye2 = document.querySelector(".section_eye .item img[data-id='1']");
             const eye3 = document.querySelector(".section_eye .item img[data-id='2']");
+            const chr_eye1 = document.querySelector(".creation_characters .characters_content .characters .chr_eyes img[data-id='0']");
+            const chr_eye2 = document.querySelector(".creation_characters .characters_content .characters .chr_eyes img[data-id='1']");
+            const chr_eye3 = document.querySelector(".creation_characters .characters_content .characters .chr_eyes img[data-id='2']");
             /* J'assigne à une variable "eye1" avec une methode "querySelector" permettant de récupérer l'attribut "data-id" de mon image "img" */
             eye1.onclick = changeEyes;
             eye2.onclick = changeEyes;
@@ -94,18 +98,27 @@
                 eye1.classList.add("target");
                 eye2.classList.remove("target");
                 eye3.classList.remove("target");
+                chr_eye1.classList.remove("hidden_item");
+                chr_eye2.classList.add("hidden_item");
+                chr_eye3.classList.add("hidden_item");
               })
 
               eye2.addEventListener('click', function () {
                 eye2.classList.add("target");
                 eye1.classList.remove("target");
                 eye3.classList.remove("target");
+                chr_eye1.classList.add("hidden_item");
+                chr_eye2.classList.remove("hidden_item");
+                chr_eye3.classList.add("hidden_item");
               })
 
               eye3.addEventListener('click', function () {
                 eye3.classList.add("target");
                 eye2.classList.remove("target");
                 eye1.classList.remove("target");
+                chr_eye1.classList.add("hidden_item");
+                chr_eye2.classList.add("hidden_item");
+                chr_eye3.classList.remove("hidden_item");
               })
           </script>
         </div>
@@ -123,6 +136,9 @@
             const hair1 = document.querySelector(".section_hair .item img[data-id='0']");
             const hair2 = document.querySelector(".section_hair .item img[data-id='1']");
             const hair3 = document.querySelector(".section_hair .item img[data-id='2']");
+            const chr_hair1 = document.querySelector(".creation_characters .characters_content .characters .chr_hair img[data-id='0']");
+            const chr_hair2 = document.querySelector(".creation_characters .characters_content .characters .chr_hair img[data-id='1']");
+            const chr_hair3 = document.querySelector(".creation_characters .characters_content .characters .chr_hair img[data-id='2']");
             hair1.onclick = changeHair;
             hair2.onclick = changeHair;
             hair3.onclick = changeHair;
@@ -137,18 +153,27 @@
                 hair1.classList.add("target");
                 hair2.classList.remove("target");
                 hair3.classList.remove("target");
+                chr_hair1.classList.remove("hidden_item");
+                chr_hair2.classList.add("hidden_item");
+                chr_hair3.classList.add("hidden_item");
               })
 
               hair2.addEventListener('click', function () {
                 hair2.classList.add("target");
                 hair1.classList.remove("target");
                 hair3.classList.remove("target");
+                chr_hair1.classList.add("hidden_item");
+                chr_hair2.classList.remove("hidden_item");
+                chr_hair3.classList.add("hidden_item");
               })
 
               hair3.addEventListener('click', function () {
                 hair3.classList.add("target");
                 hair2.classList.remove("target");
                 hair1.classList.remove("target");
+                chr_hair1.classList.add("hidden_item");
+                chr_hair2.classList.add("hidden_item");
+                chr_hair3.classList.remove("hidden_item");
               })
           </script>
         </div>
@@ -167,6 +192,9 @@
             const top1 = document.querySelector(".section_top .item img[data-id='0']");
             const top2 = document.querySelector(".section_top .item img[data-id='1']");
             const top3 = document.querySelector(".section_top .item img[data-id='2']");
+            const chr_top1 = document.querySelector(".creation_characters .characters_content .characters .chr_top img[data-id='0']");
+            const chr_top2 = document.querySelector(".creation_characters .characters_content .characters .chr_top img[data-id='1']");
+            const chr_top3 = document.querySelector(".creation_characters .characters_content .characters .chr_top img[data-id='2']");
             top1.onclick = changeTop;
             top2.onclick = changeTop;
             top3.onclick = changeTop;
@@ -181,18 +209,28 @@
                 top1.classList.add("target");
                 top2.classList.remove("target");
                 top3.classList.remove("target");
+                chr_top1.classList.remove("hidden_item");
+                chr_top2.classList.add("hidden_item");
+                chr_top3.classList.add("hidden_item");
+
               })
 
               top2.addEventListener('click', function () {
                 top2.classList.add("target");
                 top1.classList.remove("target");
                 top3.classList.remove("target");
+                chr_top1.classList.add("hidden_item");
+                chr_top2.classList.remove("hidden_item");
+                chr_top3.classList.add("hidden_item");
               })
 
               top3.addEventListener('click', function () {
                 top3.classList.add("target");
                 top2.classList.remove("target");
                 top1.classList.remove("target");
+                chr_top1.classList.add("hidden_item");
+                chr_top2.classList.add("hidden_item");
+                chr_top3.classList.remove("hidden_item");
               })
           </script>
         </div>
